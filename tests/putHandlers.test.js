@@ -5,7 +5,7 @@ const requestBody = {
 	"price": 175
 }
 
-test('status should be 200', async () => {
+test('The status should be 200', async () => {
     try {
 		const response = await fetch(`${config.API_URL}/api/v1/products/1`, {
 			method: 'PUT',
@@ -20,9 +20,8 @@ test('status should be 200', async () => {
 	}
 	expect(actualStatus). toBe(200)
 });
-//test 2
 
-test('Should be true', async () => {
+test('The result should be true', async () => {
 	let actualResponseBody;
     try {
 		const response = await fetch(`${config.API_URL}/api/v1/products/1`, {

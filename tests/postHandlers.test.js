@@ -13,8 +13,7 @@ const requestBody = {
   ],
 };
 
-//first test
-test("status should be 200", async () => {
+test("The status should be 200", async () => {
   let actualStatus;
   try {
     const response = await fetch(`${config.API_URL}/api/v1/warehouses/check`, {
@@ -31,8 +30,7 @@ test("status should be 200", async () => {
   expect(actualStatus).toBe(200);
 });
 
-//second test
-test("response body should contain expected data", async () => {
+test("The response body should contain the product sprite soft drink", async () => {
   let actualResponseBody;
   try {
     const response = await fetch(`${config.API_URL}/api/v1/warehouses/check`, {
@@ -47,7 +45,6 @@ test("response body should contain expected data", async () => {
     console.error(error);
   }
   
-  // Check for presence of "Sprite Soft Drink"
   let containsExpectedData = false;
   for (const key in actualResponseBody) {
     if (actualResponseBody[key]["Sprite Soft Drink"]) {
